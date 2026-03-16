@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+      
+        *{
+            box-sizing: border-box;
+        }
+      
+        .logo-img {
+            width: 30px;
+            height: 30px;
+        }
+        .sec1 {
+            position: relative;
+            min-height: 80vh;
+            background-image: url('./Images/image.png');
+            background-size: cover;
+            background-position: center;
+           padding: 60px 20px;
+            border-radius: 20px;
+            margin-top: 5px;
+
+        }
+
+
+        .box1 {
+     transition: all 0.3s ease;
+}
+
+
+        .head {
+    font-size: clamp(28px, 5vw, 60px);
+}
+     
+        .img1 {
+            width: 120px;
+            min-height: 60px;
+            border-radius: 15px;
+           
+        }
+        .shadow {
+            position: relative;
+            backdrop-filter: blur(10px);
+            background: rgb(255, 255, 255, 0.15);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgb(0, 0, 0, 0.15);
+            padding-top: 10px;
+            padding-left: 10px;
+            min-height: 90px;
+            width: 100%;
+            max-width: 230px;
+            
+        }
+
+      
+        .discover {
+            text-align: right;
+            font-size: 14px;
+        }
+        .dots {
+            position: absolute;
+            font-size: 30px;
+            top: -5px;
+            right: 15px;
+            
+        }
+        .arrow {
+            width: 30px;
+            min-height: 30px;
+            backdrop-filter: blur(8px);
+            background: rgb(255, 255, 255, 0.15);
+            border-radius: 50%;
+            border: 0.7px solid rgb(255, 255, 255, 0.15);
+            margin-top: auto;
+            padding-left: 4px;
+
+
+           
+
+        }
+        .arrow-img {
+            width: 20px;
+            min-height: 20px;
+            
+        }
+        .sec2 {
+            background-color: rgb(255, 253, 253);
+            position: relative;
+        }
+        .overlap{
+            position: relative;
+            margin-top: -120px;
+            z-index: 10;
+            border-radius: 25px 0 0 0;
+            background-color: #fff;
+            padding: 20px;
+            width: 100%;
+        }
+        .text {
+            font-size: 14px;
+        }
+     .circle {
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgb(0, 0, 0, 0.1);
+        height: 160px;
+        width: 100%;
+        min-height: unset;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+.circles {
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.1);
+    height: 160px;
+    width: 100%;
+    min-height: unset;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+    .sec4 {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+        .sect4-img1  {
+            width: 30px;
+            height: 30px;
+        }
+        .sec4-text1 {
+            display: flex;
+            align-items: flex-end;
+        }
+       
+        .sec5{
+            background-color: #ffffff;
+        }
+        .sec5-img1 {
+            width: 50px;
+            height: 50px;
+        }
+        .sec5-col1, .sec5-col2, .sec5-col3 {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .box1 {
+             background: rgb(255, 255, 255, 0.15);
+            border-radius: 10px;
+            min-height: 150px;
+            background-color: rgb(249, 247, 247);
+            border: 0.5px solid gray;
+            padding-left: 10px;
+            
+        }
+        .sec6-img1{
+        height: auto;
+        max-height: 520px;
+        width: 100%;
+        margin-left: 0;
+           
+        }
+        .sec6-text {
+            font-size: clamp(18px, 3vw, 30px);
+        }
+        .sec7 {
+            background-color: #f5f5f5;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .sec7-img {
+            border-radius: 40px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+       
+
+        footer {
+            background-color: black;
+        }
+
+        /* Animations to render it funky */
+          .sec1 {
+            animation: fadeIn 1.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+}
+
+  .shadow {
+            animation: slideRight 1s ease;
+        }
+        @keyframes slideRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .box1:hover {
+            border-color: #28a745 !important;
+            transform: translateY(-5px);
+        }
+                .sec5-col1, .sec5-col2, .sec5-col3 {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sec5-col1:hover, .sec5-col2:hover, .sec5-col3:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+            .circle:hover, .circles:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(31, 180, 8, 0.15);
+            }
+
+              .circle, .circles {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+                
+    </style>
+    
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div class="nav expand-lg">
+            <img src="./Images/logo.png" class="logo-img" alt="">
+            <a href="index.html" class="navbar-brand text-dark">Xurya</a>
+        </div>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="mynav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="features.html" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="btn rounded-pill bg-light border me-2">
+            <a href="index.html" class="text-dark nav-link">Log in</a>
+        </button>
+        <button class="btn bg-success rounded-pill">
+            <a href="index.html" class="text-light nav-link">Get in touch</a>
+        </button>
+    </div>
+</nav>
+        
+        
+
+    <section class="container sec1">
+        <div class="row">
+        <div class="col-md-8 ps-5 align-items-center">
+            <p class="text-light">Energy provider in the world</p>
+            <h2 class="text-light head">New Energy for <br>
+                the future</h2>
+                <div class="d-flex">
+            <P class="text-light p-3">Get in touch ↗</P>
+            <p class="text-light p-3">Our services ↗</p>
+            </div>
+            
+        </div>
+
+        <div class="col-md-4">
+            
+            <div class="shadow mb-3">
+                 <p class="text-light dots">...</p>
+                <img src="./Images/image4.png" class="img1" alt=""><br>
+               
+                <div class="arrow">
+                <img src="./Images/arrow.png" class="arrow-img" alt="">
+                </div>
+                <p class="discover text-light pe-2 pb-2">Discover our <br> recent project</p>
+            </div>
+        </div>
+    </div>
+        
+
+    </section>
+
+    <section class="sec2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-none d-md-block"></div>
+                    <div class="col-md-6 p-0">
+                        <div class="overlap">
+                            <div class="row text-center px-2"> 
+                                <div class="col-4">
+                                    <h4>6 mil</h4>
+                                    <p>The company  <br>annual things </p>
+                                </div>
+                                <div class="col-4">
+                                    <h4>315</h4>
+                                    <p>the company <br> annual things</p>
+                                </div>
+                                <div class="col-4">
+                                    <h4>120k</h4>
+                                    <p>the company <br> annual things</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+   <section class="sect3 mt-5 mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="ps-3"><b>Focusing on quality,</b> <span style="color: #28a745;">we <br>
+                maintain customer trust</span></h2>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <p class="pe-3 text mb-0">We ensure that every installation we build 
+                    has strict quality checks. Sustainable solutions for an 
+                    environmentally friendly and renewable future.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="sec4 mb-5" >
+        <div class="container">
+            <div class="row justify-content-center g-0">
+
+            <div class="col-4 col-md-2 p-0">
+                <div class="circle d-flex justify-content-center align-items-center">
+                <img src="./Images/green.png" class="sect4-img1" alt="">
+                <p class="sec4-text1 text-center">Trent <br>micro</p>
+                </div>
+            </div>
+
+            <div class="col-4 col-md-2 p-0">
+                <div class="circles d-flex justify-content-center align-items-center">
+                <img src="./Images/black.png" class="sect4-img2" alt="">
+                <p class="text-center small mb-0">katy katy</p>
+                </div>
+            </div>
+
+            <div class="col-4 col-md-2 p-0">
+                <div class="circles d-flex justify-content-center align-items-center">
+                <img src="./Images/orange.png" class="sect4-img2" alt="">
+                <p class="text-center small mb-0">katy katy</p>
+                </div>
+            </div>
+
+
+            <div class="col-4 col-md-2 p-0">
+                <div class="circles d-flex justify-content-center align-items-center">
+                <img src="./Images/dots (1).png" class="sect4-img2" alt="">
+                <p class="text-center small mb-0">katy katy</p>
+                </div>
+            </div>
+
+            <div class="col-4 col-md-2 p-0">
+                <div class="circles d-flex justify-content-center align-items-center">
+                <p class="text-center small mb-0">katy katy</p>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+
+
+    <section class="sec5 mb-5">
+        <h1 class="text-center p-5">We offer quality, <span style="color: #28a745;">with the <br> best materials and service</span></h1>
+        <div class="container">
+            <div class="row  mt-5 g-3"  >
+
+                <div class="col-md-4">
+                    <div class="sec5-col1 p-3">
+                        <img src="./Images/image5.png " class="sec5-img1" alt="">
+                        <h3>Layered security </h3>
+                        <p>with layer security, we secure everything <br> ma boy</p>
+                        </div>
+                
+
+                    <div class="sec5-col1 p-3">
+                        <img src="./Images/image5.png " class="sec5-img1" alt="">
+                        <h3>Layered security </h3>
+                        <p>with layer security, we secure everything <br> ma boy</p>
+                    </div>
+                </div>
+
+                    <div class="col-md-4">
+                        <div class="sec5-col2 p-3">
+                            <img src="./Images/image5.png " class="sec5-img1" alt="">
+                            <h3>Layered security </h3>
+                            <p>with layer security, we secure everything <br> ma boy</p>
+                        </div>
+
+                        <div class="sec5-col2 p-3 mb-5">
+                            <img src="./Images/image5.png " class="sec5-img1" alt="">
+                            <h3>Layered security </h3>
+                            <p>with layer security, we secure everything <br> ma boy</p>
+                        </div>
+
+                    </div>
+
+                     <div class="col-md-4">
+                        <div class="sec5-col3 p-3">
+                            <img src="./Images/image5.png " class="sec5-img1" alt="">
+                            <h3>Layered security </h3>
+                            <p>with layer security, we secure everything <br> ma boy</p>
+                        </div>
+
+                        <div class="sec5-col3 p-3">
+                            <img src="./Images/image5.png " class="sec5-img1" alt="">
+                            <h3>Layered security </h3>
+                            <p>with layer security, we secure everything <br> ma boy</p>
+                        </div>
+
+                     
+            </div>
+        </div>
+    </section>
+
+    <section class="sec6 mt-5 pt-5">
+        <div class="container">
+          <div class="row g-3 mt-2">
+                <div class="col-md-6">
+            
+                    <p class="sec6-text"><b>Trusted service,</b> <span style="color: #28a745;">for your <br> various needs</span></p>
+                    <button class="btn btn-success rounded-pill mb-5">Get in touch 
+                        <i class="bi-arrrow-right"></i></button>
+
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+                            <div class="box1 mb-4">
+                            <p>01</p>
+                            <p>Control panel for all</p>
+                            <a href="index.html" class="text-dark">view all the details</a>
+                            </div>
+
+                         <div class="box1">
+                            <p>03</p>
+                            <p>Control panel for all</p>
+                            <a href="index.html" class="text-dark">view all the details</a>
+                        </div>
+                        </div>
+
+
+
+
+                        <div class="col-md-6">
+                            <div class="box1 mb-4">
+                            <p>02</p>
+                            <p>Control panel for all</p>
+                            <a href="index.html" class="text-dark">view all the details</a>
+                            </div>
+
+                            <div class="box1">
+                            <p>04</p>
+                            <p>Control panel for all</p>
+                            <a href="index.html" class="text-dark">view all the details</a>
+                            </div>
+                        </div>
+
+                </div>
+                </div>
+
+                
+           
+             <div class="col-md-6 mb-5">
+                    <img src="./Images/image1.png" class="sec6-img1" alt="">
+            </div>
+        </div>
+
+        <h1 class="closing mt-5 mb-5 text-center">See how we solve <br> problems  right on target
+        </h1>
+    </div>
+    </section>
+    <section class="sec7 m-5 p-3">
+        <div class="container">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <div class="">
+                       <h1 class="closing mt-5 mb-5 text-center">See how we solve <br>
+                         problems, <span style="color: #28a745;">right on target</span></h1>
+                       <blockquote class="p-3 fst-italic">
+                                "We have used services from Xurya for most of our stations,
+                                this is our strategic step to continue to increase the number
+                                of solar panel usage for our stations, we are very satisfied
+                                with the services from Xurya."
+                            </blockquote>
+                            <p class="mt-5">Jeniffer Kolokoly - <span style="color: gray;">CTO EV Medtronic</span></p>
+                            <button class="btn btn-success rounded-pill m-3">View case study</button>
+                            <p class="mt-5">Kate celaba - <span style="color: gray;">wait ohh metabolic</span></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="./Images/image2.png" class="sec7-img img-fluid" alt="">
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="row text-center py-4">
+    <div class="d-flex justify-content-center gap-5">
+        <div class="border-top border-success pt-2">
+            <p class="mb-0">⚡ Electric car charging</p>
+        </div>
+        <div class="border-top border-dark pt-2">
+            <p class="mb-0">☀️ Residential solar panels</p>
+        </div>
+        <div class="border-top border-dark pt-2">
+            <p class="mb-0">🌬️ Wind power for industry</p>
+        </div>
+    </div>
+</div>
+  
+
+  <footer class="text-light py-4">
+    <div class="container">
+        <div class="row p-3 p-md-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2>It's time to support zero pollution,<br>
+                <span style="color: #28a745;">with renewable resources</span></h2>
+                <div class="d-flex flex-wrap mt-5 gap-3">
+                    <p class="mb-0"><span class="text-success">✔</span> Experienced for more than 10 years</p>
+                    <p class="mb-0"><span class="text-success">✔</span> Support for the latest technology</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <p class="fs-6">By increasing the effectiveness and efficiency of electricity use, the use of renewable resources is very profitable for all industrial services.</p>
+                <button class="btn btn-outline-light rounded-pill px-4">Get in touch ↗</button>
+            </div>
+        </div>
+
+    <div class="row align-items-center pt-3">
+    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+        <div class="d-flex align-items-center flex-wrap gap-2">
+            <img src="./Images/logo.png" class="logo-img" alt="">
+            <a href="index.html" class="navbar-brand text-light">Xurya</a>
+            <a href="home.html" class="me-2">Home</a>
+            <a href="home.html" class="me-2">About Us</a>
+            <a href="features.html" class="me-2">Features</a>
+            <a href="services.html" class="me-2">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="d-flex gap-2 mt-2 mt-md-0">
+            <a href="#" class="text-light border rounded-circle d-flex justify-content-center align-items-center" style="width:35px; height:35px;">f</a>
+            <a href="#" class="text-light border rounded-circle d-flex justify-content-center align-items-center" style="width:35px; height:35px;">in</a>
+            <a href="#" class="text-light border rounded-circle d-flex justify-content-center align-items-center" style="width:35px; height:35px;">t</a>
+            <a href="#" class="text-light border rounded-circle d-flex justify-content-center align-items-center" style="width:35px; height:35px;">yt</a>
+        </div>
+    </div>
+</div>
+          
+        </div>
+
+        <div class="border-top border-secondary mt-3 py-3">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center gap-2">
+                <p class="mb-0 text-secondary">© 2024 Xurya Inc. All rights reserved</p>
+                <div>
+                    <a href="#" class="text-secondary me-3">Terms of Service</a>
+                    <a href="#" class="text-secondary">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+            
+
+<script src="./JS/jquery.slim.min.js"></script>
+<script src="./JS/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
