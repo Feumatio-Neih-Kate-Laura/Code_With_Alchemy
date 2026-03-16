@@ -20,7 +20,7 @@
         }
         .sec1 {
             position: relative;
-            min-height: 80vh;
+            min-height: 90vh;
             background-image: url('./Images/image.png');
             background-size: cover;
             background-position: center;
@@ -97,7 +97,7 @@
         }
         .overlap{
             position: relative;
-            margin-top: -120px;
+            margin-top: -100px;
             z-index: 10;
             border-radius: 25px 0 0 0;
             background-color: #fff;
@@ -107,45 +107,30 @@
         .text {
             font-size: 14px;
         }
-     .circle {
-        background-color: #f5f5f5;
+     
+.circles {
+    background-color: #f5f5f5;
         border-radius: 50%;
-        box-shadow: 0 4px 15px rgb(0, 0, 0, 0.1);
+        box-shadow: 0 4px 15px rgba(87, 87, 87, 0.1);
         height: 160px;
         width: 100%;
-        min-height: unset;
+        min-height: 160px;
         margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 8px;
-    }
-.circles {
-    background-color: #f5f5f5;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.1);
-    height: 160px;
-    width: 100%;
-    min-height: unset;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+         border: 0.5px solid rgb(172, 170, 170);
 }
 
     .sec4 {
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 20px 0;
-    background-color: #ffffff;
+            padding: 20px 0;
+            background-color: #ffffff;
 }
 
         .sect4-img1  {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
         }
         .sec4-text1 {
             display: flex;
@@ -153,23 +138,21 @@
         }
        
         .sec5{
-            background-color: #ffffff;
+            background-color: #d7d4d4;
         }
         .sec5-img1 {
             width: 50px;
             height: 50px;
         }
         .sec5-col1, .sec5-col2, .sec5-col3 {
-            background-color: #ffffff;
+            background-color: #e4e1e1;
             border: 1px solid #e0e0e0;
-            border-radius: 10px;
+           
         }
 
         .box1 {
-             background: rgb(255, 255, 255, 0.15);
             border-radius: 10px;
             min-height: 150px;
-            background-color: rgb(249, 247, 247);
             border: 0.5px solid gray;
             padding-left: 10px;
             
@@ -180,6 +163,9 @@
         width: 100%;
         margin-left: 0;
            
+        }
+        .te {
+            font-size: 10px;
         }
         .sec6-text {
             font-size: clamp(18px, 3vw, 30px);
@@ -213,7 +199,7 @@
 }
 
   .shadow {
-            animation: slideRight 1s ease;
+            animation: slideRight 3s ease;
         }
         @keyframes slideRight {
             from { opacity: 0; transform: translateX(50px); }
@@ -221,7 +207,7 @@
         }
 
         .box1:hover {
-            border-color: #28a745 !important;
+            background-color: #28a745 !important;
             transform: translateY(-5px);
         }
                 .sec5-col1, .sec5-col2, .sec5-col3 {
@@ -235,6 +221,7 @@
             .circle:hover, .circles:hover {
                 transform: translateY(-10px);
                 box-shadow: 0 15px 30px rgba(31, 180, 8, 0.15);
+                background-color: white;
             }
 
               .circle, .circles {
@@ -290,7 +277,7 @@
 
     <section class="container sec1">
         <div class="row">
-        <div class="col-md-8 ps-5 align-items-center">
+        <div class="col-md-8 ps-5 align-items-center pt-5">
             <p class="text-light">Energy provider in the world</p>
             <h2 class="text-light head">New Energy for <br>
                 the future</h2>
@@ -366,7 +353,7 @@
             <div class="row justify-content-center g-0">
 
             <div class="col-4 col-md-2 p-0">
-                <div class="circle d-flex justify-content-center align-items-center">
+                <div class="circles d-flex justify-content-center align-items-center">
                 <img src="./Images/green.png" class="sect4-img1" alt="">
                 <p class="sec4-text1 text-center">Trent <br>micro</p>
                 </div>
@@ -374,14 +361,13 @@
 
             <div class="col-4 col-md-2 p-0">
                 <div class="circles d-flex justify-content-center align-items-center">
-                <img src="./Images/black.png" class="sect4-img2" alt="">
-                <p class="text-center small mb-0">katy katy</p>
+                <img src="./Images/black.png" class="sect4-img1" alt=""><p class="mb-0">katy katy</p>
                 </div>
             </div>
 
             <div class="col-4 col-md-2 p-0">
                 <div class="circles d-flex justify-content-center align-items-center">
-                <img src="./Images/orange.png" class="sect4-img2" alt="">
+                <img src="./Images/orange.png" class="sect4-img1" alt="">
                 <p class="text-center small mb-0">katy katy</p>
                 </div>
             </div>
@@ -389,7 +375,7 @@
 
             <div class="col-4 col-md-2 p-0">
                 <div class="circles d-flex justify-content-center align-items-center">
-                <img src="./Images/dots (1).png" class="sect4-img2" alt="">
+                <img src="./Images/dots (1).png" class="sect4-img1" alt="">
                 <p class="text-center small mb-0">katy katy</p>
                 </div>
             </div>
@@ -406,19 +392,20 @@
 
 
     <section class="sec5 mb-5">
-        <h1 class="text-center p-5">We offer quality, <span style="color: #28a745;">with the <br> best materials and service</span></h1>
+        <h1 class="text-center p-5">We offer quality, <span style="color: #28a745;">with the <br> 
+            best materials and service</span></h1>
         <div class="container">
-            <div class="row  mt-5 g-3"  >
+            <div class="row  mt-5 g-0"  >
 
                 <div class="col-md-4">
-                    <div class="sec5-col1 p-3">
+                    <div class="sec5-col1 p-3 bg-light">
                         <img src="./Images/image5.png " class="sec5-img1" alt="">
                         <h3>Layered security </h3>
                         <p>with layer security, we secure everything <br> ma boy</p>
                         </div>
                 
 
-                    <div class="sec5-col1 p-3">
+                    <div class="sec5-col1 p-3 bg-light">
                         <img src="./Images/image5.png " class="sec5-img1" alt="">
                         <h3>Layered security </h3>
                         <p>with layer security, we secure everything <br> ma boy</p>
@@ -426,13 +413,13 @@
                 </div>
 
                     <div class="col-md-4">
-                        <div class="sec5-col2 p-3">
+                        <div class="sec5-col2 p-3 bg-light">
                             <img src="./Images/image5.png " class="sec5-img1" alt="">
                             <h3>Layered security </h3>
                             <p>with layer security, we secure everything <br> ma boy</p>
                         </div>
 
-                        <div class="sec5-col2 p-3 mb-5">
+                        <div class="sec5-col2 p-3 mb-5 bg-light">
                             <img src="./Images/image5.png " class="sec5-img1" alt="">
                             <h3>Layered security </h3>
                             <p>with layer security, we secure everything <br> ma boy</p>
@@ -441,13 +428,13 @@
                     </div>
 
                      <div class="col-md-4">
-                        <div class="sec5-col3 p-3">
+                        <div class="sec5-col3 p-3 bg-light">
                             <img src="./Images/image5.png " class="sec5-img1" alt="">
                             <h3>Layered security </h3>
                             <p>with layer security, we secure everything <br> ma boy</p>
                         </div>
 
-                        <div class="sec5-col3 p-3">
+                        <div class="sec5-col3 p-3 bg-light">
                             <img src="./Images/image5.png " class="sec5-img1" alt="">
                             <h3>Layered security </h3>
                             <p>with layer security, we secure everything <br> ma boy</p>
@@ -483,9 +470,6 @@
                         </div>
                         </div>
 
-
-
-
                         <div class="col-md-6">
                             <div class="box1 mb-4">
                             <p>02</p>
@@ -510,7 +494,8 @@
             </div>
         </div>
 
-        <h1 class="closing mt-5 mb-5 text-center">See how we solve <br> problems  right on target
+      <h1 class="closing mt-5 mb-5 text-center">See how we solve <br>
+                         problems, <span style="color: #14c53d;">right on target</span></h1>
         </h1>
     </div>
     </section>
@@ -519,15 +504,16 @@
             <div class="row g-2">
                 <div class="col-md-6">
                     <div class="">
-                       <h1 class="closing mt-5 mb-5 text-center">See how we solve <br>
-                         problems, <span style="color: #28a745;">right on target</span></h1>
+                       
                        <blockquote class="p-3 fst-italic">
+                        <h3 class="pb-3">Metabolics</h3>
+
                                 "We have used services from Xurya for most of our stations,
                                 this is our strategic step to continue to increase the number
                                 of solar panel usage for our stations, we are very satisfied
                                 with the services from Xurya."
                             </blockquote>
-                            <p class="mt-5">Jeniffer Kolokoly - <span style="color: gray;">CTO EV Medtronic</span></p>
+
                             <button class="btn btn-success rounded-pill m-3">View case study</button>
                             <p class="mt-5">Kate celaba - <span style="color: gray;">wait ohh metabolic</span></p>
                     </div>
@@ -560,13 +546,13 @@
 
   <footer class="text-light py-4">
     <div class="container">
-        <div class="row p-3 p-md-5">
+        <div class="row p-2 p-md-5">
             <div class="col-md-6 mb-4 mb-md-0">
-                <h2>It's time to support zero pollution,<br>
-                <span style="color: #28a745;">with renewable resources</span></h2>
-                <div class="d-flex flex-wrap mt-5 gap-3">
-                    <p class="mb-0"><span class="text-success">✔</span> Experienced for more than 10 years</p>
-                    <p class="mb-0"><span class="text-success">✔</span> Support for the latest technology</p>
+                <h3>It's time to support zero pollution,
+                <span style="color: #28a745;">with renewable resources</span></h3>
+                <div class="d-flex justify-content-center mt-3 gap-3">
+                    <p class="te mb-0"><span class="text-success">✔</span> Experienced for more than 10 years</p>
+                    <p class="te mb-0"><span class="text-success">✔</span> Support for the latest technology</p>
                 </div>
             </div>
 
@@ -596,7 +582,7 @@
     </div>
 </div>
           
-        </div>
+       
 
         <div class="border-top border-secondary mt-3 py-3">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center gap-2">
