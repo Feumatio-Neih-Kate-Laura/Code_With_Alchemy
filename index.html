@@ -289,25 +289,50 @@
             background-color: #927de0;
         }
 @media (max-width: 991px) {
+    .wrapper {
+        padding: 0;
+        gap: 0;
+    }
+
     .sidebar {
         position: fixed;
+        left: -220px;
         top: 0;
-        height: 100vh;
-        z-index: 999;
+        height: 100%;
         width: 220px;
-        box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+        border-radius: 0 14px 14px 0;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.15);
         transition: left 0.3s ease;
+        z-index: 1000;
     }
-    .sidebar.show {
+
+    .sidebar.open {
         left: 0;
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.3);
+        z-index: 999;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+    }
+
+    .stat {
+        display: none;
     }
 }
 
   </style>
 </head>
 <body>
+   <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="wrapper">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="d-flex align-items-center g-2 mb-3 ps-1">
                 <div class="brand-icon"><i class="bi bi-lightning-charge-fill"></i></div>
                 <a href="index.html" class="navbar-brand text-dark fw-bold fs-6 mb-0"> Coursue</a>
@@ -385,9 +410,9 @@
             </div>
         </aside>
 
-        <button class="btn d-lg-none me-2" id="sidebarToggle" style="border:1px solid #eee; border-radius:10px; padding:6px 10px;">
-        <i class="bi bi-list" style="font-size:18px;"></i>
-        </button>
+       <button class="btn d-lg-none me-2" id="sidebarToggle" style="border:1px solid #eee; border-radius:10px; padding:6px 10px;">
+    <i class="bi bi-list" style="font-size:18px;"></i>
+</button>
         
 
 
@@ -627,7 +652,7 @@
 
             </div>
           
-            </style>
+
 
            <div class="stat border rounded my-3 w-100 w-lg-auto">
               <div class="d-flex justify-content-between align-items-center">
@@ -677,6 +702,29 @@
        
     </div>
     </div>
+
+    <script>
+    const toggle  = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    toggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+        overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 992) {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('show');
+        }
+    });
+</script>
 
     <script src="./JS/jquery.slim.min.js"></script>
     <script src="./JS/bootstrap.bundle.min.js"></script>
