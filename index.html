@@ -82,6 +82,17 @@
             text-decoration: none;
         }
 
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            color: #555;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
         .sidebar .nav-link:hover {
             background-color: #f3f0ff;
             color: #6c63ff;
@@ -223,6 +234,28 @@
             align-items: center;
             gap: 3px;
         }
+        .hide-scroll{
+            display: flex;
+            flex: 1;
+            min-height: 0 !important;
+            gap: 15px;
+        }
+        .cent{
+             overflow-y: auto !important;
+             min-height: 0;
+             flex: 1;
+             -ms-overflow-style: none;
+             scrollbar-width: none;
+        }
+        .cent::-webkit-scrollbar{
+            display: none;
+        }
+        .stat{
+            width: 280px !important;
+            padding: 10px 30px;
+            border-radius: 10px;
+
+        }
 
         .tag-blue { background: #e9f3ff; color: #2196f3; }
         .tag-purple { background: #ece9ff; color: #6c63ff; }
@@ -231,10 +264,8 @@
 </head>
 <body>
     <div class="wrapper">
-
-       
         <aside class="sidebar">
-            <div class="d-flex align-items-center gap-2 mb-3 ps-1">
+            <div class="d-flex align-items-center g-2 mb-3 ps-1">
                 <div class="brand-icon"><i class="bi bi-lightning-charge-fill"></i></div>
                 <a href="index.html" class="navbar-brand text-dark fw-bold fs-6 mb-0"> Coursue</a>
             </div>
@@ -314,9 +345,7 @@
 
 
        
-        <main class="flex-grow-1 bg-white rounded-3 p-0 d-flex flex-column overflow-hidden">
-
-           
+        <main class="flex-grow-1 bg-white rounded-3 p-0 d-flex flex-column overflow-hidden"> 
             <div class="d-flex align-items-center gap-2 p-3 border-bottom">
 
                 <div class="d-flex align-items-center gap-2 flex-grow-1 bg-light rounded-pill px-3 py-2">
@@ -341,11 +370,11 @@
                     </div>
                 </div>
             </div>
+ 
 
+            <div class="hide-scroll">
 
-            <div class="p-3 overflow-auto flex-grow-1">
-
-                
+            <div class="p-3 flex-grow-1 cent">
                 <div class="hero-banner mb-3">
                     <p style="font-size:11px; background:rgba(255,255,255,0.2); display:inline-block; padding:3px 10px; border-radius:20px; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.07em;">Online Course</p>
                     <h2>Sharpen Your Skills with Professional Online Courses</h2>
@@ -468,9 +497,21 @@
                 </table>
 
             </div>
-        </main>
+          
+            </style>
+
+            <div class="stat border rounded my-3">
+                <h6>Statistic</h6>
+                 <img src="./images/image2.jpg" alt="" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; justify-content: center;">
+               
+    </div>
+    </main>
        
     </div>
+    </div>
+
+   
+    
 
     <script src="./JS/jquery.slim.min.js"></script>
     <script src="./JS/bootstrap.bundle.min.js"></script>
