@@ -260,6 +260,18 @@
         .tag-blue { background: #e9f3ff; color: #2196f3; }
         .tag-purple { background: #ece9ff; color: #6c63ff; }
 
+        .progress {
+             width: 115px; 
+        height: 115px; 
+        border-radius: 50%; 
+        border: 4px solid #e0e0e0;
+        border-top-color: #6c63ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        }
+
   </style>
 </head>
 <body>
@@ -502,8 +514,15 @@
 
             <div class="stat border rounded my-3">
                 <h6>Statistic</h6>
-                 <img src="./images/image2.jpg" alt="" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; justify-content: center;">
-               
+                <div class="d-flex justify-content-center align-items-center my-3">
+    <div class="progress">
+        <img src="./images/image2.jpg" alt="" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover">
+    </div>
+</div>
+                <p class="text-center">Good morning Jason</p>
+                <p class="text-center" style="color: #aaa; font-size: 10px;">Continue with learning to achieve your target</p>
+                    
+            </div>
     </div>
     </main>
        
