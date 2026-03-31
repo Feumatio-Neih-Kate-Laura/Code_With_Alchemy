@@ -12,7 +12,7 @@
         .wrapper {
             display: flex;
             height: 100vh;
-            padding: 10px;
+            padding: 5px;
             gap: 12px;
         }
 
@@ -288,50 +288,84 @@
             width: 40%;
             background-color: #927de0;
         }
-@media (max-width: 991px) {
-    .wrapper {
-        padding: 0;
-        gap: 0;
+    @media (max-width: 991px) {
+    
+    body { 
+        overflow-x: hidden !important; 
+        overflow-y: auto !important; 
+        height: auto !important;
     }
 
+    .wrapper { 
+        display: block !important; 
+        height: auto !important;
+        padding: 0 !important;
+        gap: 0 !important;
+    }
+
+   
     .sidebar {
-        position: fixed;
-        left: -220px;
+        position: fixed !important;
         top: 0;
-        height: 100%;
-        width: 220px;
-        border-radius: 0 14px 14px 0;
-        box-shadow: 4px 0 20px rgba(0,0,0,0.15);
-        transition: left 0.3s ease;
-        z-index: 1000;
+        left: -280px;
+        width: 260px !important;
+        height: 100vh !important;
+        z-index: 2000 !important;
+        transition: left 0.3s ease-in-out;
+        border-radius: 0 15px 15px 0 !important;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1);
     }
 
-    .sidebar.open {
-        left: 0;
+    
+    .stat {
+        position: fixed !important;
+        top: 0;
+        right: -350px; 
+        width: 300px !important;
+        height: 100vh !important;
+        z-index: 2000 !important;
+        transition: right 0.3s ease-in-out;
+        margin: 0 !important;
+        border-radius: 15px 0 0 15px !important;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        background: white !important;
     }
 
+   
+    .sidebar.open { left: 0 !important; }
+    .stat.open { right: 0 !important; }
+
+    
     .sidebar-overlay {
-        display: none;
         position: fixed;
         inset: 0;
-        background: rgba(0,0,0,0.3);
-        z-index: 999;
+        background: rgba(0,0,0,0.5);
+        display: none; 
+        z-index: 1500;
     }
-
     .sidebar-overlay.show {
-        display: block;
+        display: block !important;
     }
 
-    .stat {
-        display: none;
+    
+    .main {
+        width: 100% !important;
+        padding: 10px !important;
+        display: block !important;
+    }
+    
+   
+    .cent {
+        overflow: visible !important;
+        height: auto !important;
     }
 }
 
   </style>
 </head>
 <body>
-   <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="wrapper">
+         <div class="sidebar-overlay" id="sidebarOverlay"></div>
         <aside class="sidebar" id="sidebar">
             <div class="d-flex align-items-center g-2 mb-3 ps-1">
                 <div class="brand-icon"><i class="bi bi-lightning-charge-fill"></i></div>
@@ -410,9 +444,16 @@
             </div>
         </aside>
 
-       <button class="btn d-lg-none me-2" id="sidebarToggle" style="border:1px solid #eee; border-radius:10px; padding:6px 10px;">
-    <i class="bi bi-list" style="font-size:18px;"></i>
-</button>
+         <div class="d-flex justify-content-between d-md-none">
+        <button class="btn d-lg-none me-2" id="sidebarToggle" style="border:1px solid #eee; border-radius:10px; padding:6px 10px;">
+        <i class="bi bi-list" style="font-size:18px;"></i>
+        </button>
+         <span class="fw-bold fs-5">Coursue</span>
+
+        <button class="btn border-0 p-0 me-3" id="statToggle">
+            <i class="bi bi-bar-chart-fill fs-3 text-primary"></i>
+        </button>
+        </div>
         
 
 
@@ -437,7 +478,7 @@
                 <div class="d-flex align-items-center gap-2 border rounded-pill px-3 py-1">
                     <img src="./images/image1.jpg" alt="Profile" class="pro-pic">
                     <div>
-                        <span class="fw-medium text-dark" style="font-size:14px;">Kenne Divine</span>
+                        <span class="fw-medium text-dark" style="font-size:14px;">Divine</span>
                     </div>
                 </div>
             </div>
@@ -652,18 +693,20 @@
 
             </div>
           
+            </style>
 
-
-           <div class="stat border rounded my-3 w-100 w-lg-auto">
-              <div class="d-flex justify-content-between align-items-center">
-                <h6 class="mb-0">Statistic</h6>
-                <i class="bi bi-three-dots-vertical" style="color:#aaa; cursor:pointer;"></i>
-            </div>
-                <div class="d-flex justify-content-center align-items-center my-3">
-            <div class="circle-ring">
-             <img src="./images/image2.jpg" alt="" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover">
-            </div>
+    <aside class="stat border-start p-4 bg-white" id="statPanel">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h6 class="mb-0">Statistic</h6>
+            <i class="bi bi-three-dots-vertical" style="color:#aaa; cursor:pointer;"></i>
         </div>
+
+      <div class="d-flex flex-column align-items-center mb-3">
+    <div class="circle-ring">
+        <img src="./images/image2.jpg" alt="profile" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover">
+    </div>
+</div>
+      
                 <p class="text-center mb-0">Good morning Jason 💥</p>
                 <p class="text-center mb-0" style="color: #aaa; font-size: 10px;">Continue with learning to achieve your target</p>
                 <img src="./images/chart.svg" alt="chart" style="width:100%; border-radius:8px;">
@@ -698,33 +741,35 @@
                <button class="btn w-100 mt-1" style="background-color: #ece9ff; color: #6c63ff; border-radius: 20px; font-size: 12px;">See all</button>
             </div>
     </div>
+
     </main>
-       
-    </div>
-    </div>
 
-    <script>
-    const toggle  = document.getElementById('sidebarToggle');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('sidebarOverlay');
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const statPanel = document.getElementById('statPanel');
+            const overlay = document.getElementById('sidebarOverlay');
+            const btnSidebar = document.getElementById('sidebarToggle');
+            const btnStat = document.getElementById('statToggle');
 
-    toggle.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
-        overlay.classList.toggle('show');
-    });
+            btnSidebar.onclick = () => {
+                sidebar.classList.add('open');
+                overlay.classList.add('show');
+            };
 
-    overlay.addEventListener('click', () => {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('show');
-    });
+            btnStat.onclick = () => {
+                statPanel.classList.add('open');
+                overlay.classList.add('show');
+            };
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 992) {
-            sidebar.classList.remove('open');
-            overlay.classList.remove('show');
-        }
-    });
-</script>
+            overlay.onclick = () => {
+                sidebar.classList.remove('open');
+                statPanel.classList.remove('open');
+                overlay.classList.remove('show');
+            };
+        });
+    </script>
+   
 
     <script src="./JS/jquery.slim.min.js"></script>
     <script src="./JS/bootstrap.bundle.min.js"></script>
