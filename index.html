@@ -212,12 +212,13 @@
         .watched-text { font-size: 11px; color: #aaa; }
 
         
-        .course-card {
-            border-radius: 12px;
-            border: 1px solid #eee;
-            overflow: hidden;
-            width: 200px;
-        }
+     
+.course-card {
+    border-radius: 12px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    width: 100%; 
+}
 
         .course-card img {
             width: 100%;
@@ -548,75 +549,70 @@
 
                 </div>
 
-                <div class="d-flex gap-3 mb-4">
+                   
+                <div class="p-3 flex-grow-1 cent">
+    
+    <div class="d-flex justify-content-between mb-3">
+        <h5 class="fw-bold mb-0">Continue Watching</h5>
+        <div class="d-flex gap-2">
+            <div class="notifs"><i class="bi bi-chevron-left text-white"></i></div>
+            <div class="notif"><i class="bi bi-chevron-right text-dark"></i></div>
+        </div>
+    </div>
 
-                    <div class="course-card">
-                        <img src="./images/image1.jpg" alt="Front End">
-                        <div class="p-2">
-                            <span class="course-tag tag-blue mb-2"><i class="bi bi-collection-play-fill"></i> Front End</span>
-                            <p class="mt-2 mb-2" style="font-size:12px; font-weight:600; line-height:1.4;">Beginner's Guide to Becoming a Professional Front-End Developer</p>
-
-                             <div class="progression m-2">
-                             <div class="fill" style="width: 40%; ">
-                            </div>
-                        </div>
-
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="./images/image2.jpg" alt="" style="width:24px; height:24px; border-radius:50%; object-fit:cover;">
-                                <div>
-                                    <div style="font-size:11px; font-weight:600;">Leonardo samsul</div>
-                                    <div style="font-size:10px; color:#aaa;">Mentor</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-card">
-                        <img src="./images/image2.jpg" alt="UI/UX">
-                        <div class="p-2">
-                            <span class="course-tag tag-purple mb-2"><i class="bi bi-pen-fill"></i> UI/UX Design</span>
-                            <p class="mt-2 mb-2" style="font-size:12px; font-weight:600; line-height:1.4;">Optimizing User Experience with the Best UI/UX Design</p>
-
-                             <div class="progression m-2">
-                             <div class="fill" style="width: 40%; ">
-                            </div>
-                        </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="./images/image3.jpg" alt="" style="width:24px; height:24px; border-radius:50%; object-fit:cover;">
-                                <div>
-                                    <div style="font-size:11px; font-weight:600;">Bayu Saito</div>
-                                    <div style="font-size:10px; color:#aaa;">Mentor</div>
-                                </div>
-                            </div>
+    <div class="container-fluid p-0">
+        <div class="row g-3 mb-4"> 
+            
+            <div class="col-12 col-md-6 col-xl-4"> 
+                <div class="course-card">
+                    <img src="./images/image1.jpg" alt="Front End">
+                    <div class="p-2">
+                        <span class="course-tag tag-blue mb-2"><i class="bi bi-collection-play-fill"></i> Front End</span>
+                        <p class="mt-2 mb-2" style="font-size:12px; font-weight:600; line-height:1.4;">Beginner's Guide to Becoming a Professional Front-End Developer</p>
+                        <div class="progression mb-2"><div class="fill" style="width: 40%;"></div></div>
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/image3.jpg" class="pro-pic" style="width:24px; height:24px;">
+                            <div><div style="font-size:11px; font-weight:600;">Bayu Saito</div><div style="font-size:10px; color:#aaa;">Mentor</div></div>
                         </div>
                     </div>
-
-                     <div class="course-card">
-                        <img src="./images/image4.jpg" alt="UI/UX">
-                        <div class="p-2">
-                            <span class="course-tag tag-purple mb-2"><i class="bi bi-pen-fill"></i> UI/UX Design</span>
-                            <p class="mt-2 mb-2" style="font-size:12px; font-weight:600; line-height:1.4;">Optimizing User Experience with the Best UI/UX Design</p>
-
-                             <div class="progression m-2">
-                             <div class="fill" style="width: 40%; ">
-                            </div>
-                        </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="./images/image3.jpg" alt="" style="width:24px; height:24px; border-radius:50%; object-fit:cover;">
-                                <div>
-                                    <div style="font-size:11px; font-weight:600;">Bayu Saito</div>
-                                    <div style="font-size:10px; color:#aaa;">Mentor</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
                 </div>
+            </div>
 
-              
+            <div class="col-12 col-md-6 col-xl-4"> 
+                <div class="course-card">
+                    <img src="./images/image2.jpg" alt="UI/UX">
+                    <div class="p-2">
+                        <span class="course-tag tag-purple mb-2"><i class="bi bi-pen-fill"></i> UI/UX Design</span>
+                        <p class="mt-2 mb-2" style="font-size:12px; font-weight:600; line-height:1.4;">Optimizing User Experience with the Best UI/UX Design</p>
+                        <div class="progression mb-2"><div class="fill" style="width: 60%;"></div></div>
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/image3.jpg" class="pro-pic" style="width:24px; height:24px;">
+                            <div><div style="font-size:11px; font-weight:600;">Bayu Saito</div><div style="font-size:10px; color:#aaa;">Mentor</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4"> 
+                <div class="course-card">
+                    <img src="./images/image2.jpg" alt="UI/UX">
+                    <div class="p-2">
+                        <span class="course-tag tag-purple mb-2"><i class="bi bi-pen-fill"></i> UI/UX Design</span>
+                        <p class="mt-2 mb-2" style="font-size:12px; font-weight:600; line-height:1.4;">Advanced Prototyping and Interaction Design</p>
+                        <div class="progression mb-2"><div class="fill" style="width: 20%;"></div></div>
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/image3.jpg" class="pro-pic" style="width:24px; height:24px;">
+                            <div><div style="font-size:11px; font-weight:600;">Bayu Saito</div><div style="font-size:10px; color:#aaa;">Mentor</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+    </div> 
+</div>
+
+
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h5 class="fw-bold mb-0">Your Lesson</h5>
                     <a href="#" style="font-size:13px; color:#6c63ff; text-decoration:none;">See all</a>
